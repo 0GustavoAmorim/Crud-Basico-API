@@ -24,10 +24,10 @@ app.MapPut("/editproduct", (Product product) => {
 });
 
 //delete method
-app.MapDelete("/deleteproduct/{code}", ([FromRoute]string code) => {
+app.MapDelete("/deleteproduct/{code}", ([FromRoute] string code) => {
     var productSaved = ProductRepository.GetBy(code);
-    productRepository.Remove(productSaved);
-})
+    ProductRepository.Remove(productSaved);
+});
 
 app.Run();
 
