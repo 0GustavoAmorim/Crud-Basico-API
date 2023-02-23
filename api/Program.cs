@@ -7,7 +7,7 @@ var app = builder.Build();
 var configuration = app.Configuration;
 ProductRepository.Init(configuration);
 
-//adiconar produtoss
+//adiconar produto
 app.MapPost("/products", (Product product) => {
     ProductRepository.Add(product);
     return Results.Created($"/products/{product.Code}", product.Code);
