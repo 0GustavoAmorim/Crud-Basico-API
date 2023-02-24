@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Desktop\\curso-api\\api\\api.csproj": {}
+    "C:\\Users\\96271\\Desktop\\Crud-Basico-API\\api\\api.csproj": {}
   },
   "projects": {
-    "D:\\Desktop\\curso-api\\api\\api.csproj": {
+    "C:\\Users\\96271\\Desktop\\Crud-Basico-API\\api\\api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Desktop\\curso-api\\api\\api.csproj",
+        "projectUniqueName": "C:\\Users\\96271\\Desktop\\Crud-Basico-API\\api\\api.csproj",
         "projectName": "api",
-        "projectPath": "D:\\Desktop\\curso-api\\api\\api.csproj",
-        "packagesPath": "C:\\Users\\Samsung\\.nuget\\packages\\",
-        "outputPath": "D:\\Desktop\\curso-api\\api\\obj\\",
+        "projectPath": "C:\\Users\\96271\\Desktop\\Crud-Basico-API\\api\\api.csproj",
+        "packagesPath": "C:\\Users\\96271\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\96271\\Desktop\\Crud-Basico-API\\api\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Samsung\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\96271\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,13 +39,30 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -61,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.114\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     }

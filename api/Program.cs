@@ -1,8 +1,13 @@
 using System.Net.Mime;
 using System;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+//adicionando servido 
+builder.Services.AddDbContext<ApplicationDbContext>();
+
 var app = builder.Build();
 var configuration = app.Configuration;
 ProductRepository.Init(configuration);
@@ -77,6 +82,18 @@ public static class ProductRepository{
 }
 
 public class Product{
+    public int Id { get; set; }
     public string Code { get; set; }
     public string Name { get; set; }
+    public string Description { get; set; }
+}
+
+public class ApplicationDbContext : DbContext {
+    public DbSet<Product> Products { get; set; }
+
+    //configurando conexão com banco
+    protected override void OnConfiguring(DbContextOptionsBuilder options)
+        => options.UseSqlServer(
+            "connection string"
+        );
 }
